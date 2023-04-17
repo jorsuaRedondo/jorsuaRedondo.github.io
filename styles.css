@@ -222,11 +222,13 @@ h1 {
   text-transform: uppercase;
   color: #424242;
 }
-.btncorr{
+
+.btncorr {
   margin-top: 10px;
   width: 100px;
   max-height: 40px;
 }
+
 .bd-example form {
   background-color: lightgrey;
   width: 42%;
@@ -524,31 +526,6 @@ th {
     background-color: #f2f2f2;
   }
 }
-
-@media (max-width: 767px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  ul {
-    flex-direction: column;
-  }
-
-  li {
-    margin: 0;
-  }
-
-  .redes-sociales {
-    margin-top: 100px;
-  }
-}
-
 
 @media (max-width: 767px) {
   header {
