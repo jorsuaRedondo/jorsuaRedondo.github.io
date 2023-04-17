@@ -548,3 +548,64 @@ th {
     margin-top: 100px;
   }
 }
+
+
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  .redes-sociales {
+    margin-top: 100px;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+  .bd-example  {
+    display: block;
+    width: 500px;
+    height: 200px;
+    margin-top: 600px;
+    margin-bottom: 200px;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  #seleccionafecha{
+    display: none;
+  }
+
+  #seleccionahora{
+    display: none;
+  }
+
+  #fecha{
+    display: none;
+  }
+
+  #hora{
+    display: none;
+  }
+
+  #anotaciones label{
+    font-size: 10px;
+  }
+}
+  
