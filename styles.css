@@ -591,12 +591,16 @@ th {
   }
 
   .comentarios{
-    max-width: 200px;
+    max-width: 100px;
   }
 
 
   .bar {
     display: none;
+  }
+  
+  .fieldset{
+    max-width:200px;
   }
 
   
