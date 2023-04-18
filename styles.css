@@ -229,7 +229,9 @@ h1 {
   max-height: 40px;
 }
 
+
 .bd-example form {
+  display: inline;
   background-color: lightgrey;
   width: 42%;
   border-radius: 20px;
@@ -237,13 +239,11 @@ h1 {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin-bottom: 160px;
+  margin: 0 auto;
+  margin-top: -700px;
+  margin-bottom: 130px;
+
+
   max-height: 650px;
 }
 
@@ -305,7 +305,14 @@ h1 {
   max-width: 100%;
   height: auto;
 }
-
+.comentarios{
+  max-width: 500px;
+ 
+}
+fieldset{
+  margin: 0 auto;
+  max-width: 300px;
+}
 .acordeon {
   display: flex;
   flex-wrap: wrap;
@@ -489,10 +496,7 @@ input {
 }
 
 table {
-  margin-top: 10px;
   width: 50%;
-
-
 }
 
 td,
@@ -516,15 +520,13 @@ th {
     overflow-x: auto;
   }
 
-  th,
   td {
     display: block;
     text-align: center;
+    overflow-x: auto;
   }
 
-  th {
-    background-color: #f2f2f2;
-  }
+
 }
 
 @media (max-width: 767px) {
@@ -548,6 +550,13 @@ th {
 
   .redes-sociales {
     margin-top: 100px;
+    margin: 0 auto;
+    margin-left: 80px;
+  }
+
+  .contacto{
+    margin: 0 auto;
+    margin-left: 40px;
   }
 }
 
@@ -555,34 +564,41 @@ th {
 
 
 @media only screen and (max-width: 767px) {
-  .bd-example  {
-    display: block;
-    width: 500px;
+  .bd-example {
+    display: flex;
     height: 200px;
-    margin-top: 600px;
-    margin-bottom: 200px;
+    margin-top: 630px;
     max-width: 200px;
-    max-height: 200px;
+    max-height: 900px;
+
+
   }
 
-  #seleccionafecha{
+  .bd-example form {
+
+    height: 580px;
+    width: 300px;
+  margin-left: 50px;
+
+  }
+
+  .redes-sociales ul {
+    margin: 0 auto;
+  }
+
+  .redes {
+    margin: 0 auto;
+  }
+
+  .comentarios{
+    max-width: 200px;
+  }
+
+
+  .bar {
     display: none;
   }
 
-  #seleccionahora{
-    display: none;
-  }
-
-  #fecha{
-    display: none;
-  }
-
-  #hora{
-    display: none;
-  }
-
-  #anotaciones label{
-    font-size: 10px;
-  }
-}
   
+  
+}
