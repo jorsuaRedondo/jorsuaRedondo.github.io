@@ -1,8 +1,6 @@
 // Evento para obtener el footer solo cuando se hace el evento scroll
-let footer = document.querySelector("footer");
-let tipoAnimal = document.getElementById("nombreR").value.trim();
-let anotaciones = document.getElementById("anotaciones").value.trim();
-let tipoAtencion = document.getElementById("tipo").value;
+var footer = document.querySelector("footer");
+
 // Agregar un evento de desplazamiento al documento
 window.addEventListener("scroll", function () {
   // Si el usuario ha llegado al final de la página
@@ -15,11 +13,11 @@ window.addEventListener("scroll", function () {
   }
 });
 
-const toggleButton = document.querySelector(".toggle-button");
-const navbar = document.querySelector(".navbar");
+const toggleButton = document.querySelector('.toggle-button');
+const navbar = document.querySelector('.navbar');
 
-toggleButton.addEventListener("click", () => {
-  navbar.classList.toggle("active");
+toggleButton.addEventListener('click', () => {
+  navbar.classList.toggle('active');
 });
 
 function validarFormulario() {
