@@ -86,16 +86,21 @@ function validarFormulario() {
 }
 
 
-function descargarComprobante(nombre, tipoAnimal, correo, identificacion, otroAnimal, tipoConsulta, tipoAtencion, fecha, hora, anotaciones) {
-  const contenidoArchivo = `Nombre: ${nombre}
-Correo electrónico: ${correo}
-Identificación: ${identificacion}
-Tipo de animal: ${tipoAnimal}${otroAnimal ? ` (${otroAnimal})` : ""}
-Tipo de consulta: ${tipoConsulta}
-Tipo de atención: ${tipoAtencion}
-Fecha: ${fecha}
-Hora: ${hora}
-Anotaciones: ${anotaciones}`;
+function descargarComprobante(
+  nombre,
+  tipoAnimal,
+  correo,
+  identificacion,
+  otroAnimal,
+  tipoConsulta,
+  tipoAtencion,
+  fecha,
+  hora,
+  anotaciones
+) {
+  const contenidoArchivo = `nombre:${nombre} Correo electrónico: ${correo} Identificación: ${identificacion} Tipo de animal: ${tipoAnimal}${
+    otroAnimal ? `(${otroAnimal})` : ""
+  } Tipo de consulta: ${tipoConsulta} Tipo de atención: ${tipoAtencion} Fecha: ${fecha} Hora: ${hora} Anotaciones: ${anotaciones}`;
 
   const archivo = new Blob([contenidoArchivo], { type: "text/plain" });
   const urlArchivo = URL.createObjectURL(archivo);
@@ -104,10 +109,10 @@ Anotaciones: ${anotaciones}`;
   enlaceDescarga.href = urlArchivo;
   enlaceDescarga.download = "comprobante_cita.txt";
   enlaceDescarga.innerText = "Descargar comprobante";
-  
+
   // Agregar el enlace al final del cuerpo del documento
   document.body.appendChild(enlaceDescarga);
-  
+
   // Hacer clic en el enlace para descargar el archivo
   enlaceDescarga.click();
 
@@ -117,3 +122,30 @@ Anotaciones: ${anotaciones}`;
     document.body.removeChild(enlaceDescarga);
   }, 0);
 }
+
+const botonDescargar = document.getElementById("botonForm");
+botonDescargar.addEventListener("click", () => {
+  const nombre = document.getElementById("nombre").value;
+  const correo = document.getElementById("correo").value;
+  const identificacion = document.getElementById("id").value;
+  const tipoAnimal = document.getElementById("nombreR").value;
+  const otroAnimal = document.getElementById("otros").value;
+  const tipoConsulta = document.getElementById("consulta").value;
+  const tipoAtencion = document.getElementById("tipo").value;
+  const fecha = document.getElementById("fecha").value;
+  const hora = document.getElementById("hora").value;
+  const anotaciones = document.getElementById("anotaciones").value;
+
+  descargarComprobante(
+    nombre,
+    tipoAnimal,
+    correo,
+    identificacion,
+    otroAnimal,
+    tipoConsulta,
+    tipoAtencion,
+    fecha,
+    hora,
+    anotaciones
+  );
+});
