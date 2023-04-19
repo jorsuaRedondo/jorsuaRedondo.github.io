@@ -23,20 +23,23 @@
 
 
   <header>
+    <h1>Sobre nosotros</h1>
 
-    <h1 id="contactenos">Contáctenos</h1>
 
-    <nav>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <nav class="navbar">
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="galeria.html">Galería</a></li>
-        <li><a href="contactenos.html">Contáctenos</a></l>
+        <li><a href="contactenos.html">Contactenos</a></li>
         <li><a href="catalogo_y_servicios.html">Catálogo y Servicios</a></li>
         <li><a href="sobre_nosotros.html">Sobre Nosotros</a></li>
       </ul>
-
     </nav>
-    <br><br><br>
   </header>
 
   <br> <br> <br> <br>
@@ -62,6 +65,7 @@
   </div>
 
   <br><br><br><br><br>
+
   <div class="bd-example">
 
     <form action="">
@@ -70,16 +74,14 @@
       <label for="nombre">Ingrese su nombre</label>
       <input type="text" id="nombre">
 
-      <label for="id">Ingrese su identificación</label>
+      <label for="correo">Ingrese su correo electrónico</label>
       <input type="text" id="correo">
-      <label for="id">Ingrese su correo electronico</label>
+
+      <label for="id">Ingrese su identificación</label>
       <input type="text" id="id">
 
-
-
-
       <label for="nombreR">Seleccione el tipo de animal:</label>
-      <select name="provincias" id="nombreR">
+      <select name="nombreR" id="nombreR">
         <option value="perro">Perro</option>
         <option value="gato">Gato</option>
         <option value="caballo">Caballo</option>
@@ -87,47 +89,48 @@
         <option value="hamster">Hámster</option>
         <option value="ardilla">Ardilla</option>
         <option value="Otro">Otro</option>
-
-
       </select>
 
-
-      <label for="otros">Si eligió "Otros", indique que tipo es:</label>
-      <input type="Text" id="otros">
+      <label for="otros">Si eligió "Otros", indique qué tipo es:</label>
+      <input type="text" id="otros">
 
       <label for="consulta">Seleccione el tipo de consulta:</label>
       <select name="cons" id="consulta">
-
         <option value="Casa">A domicilio</option>
         <option value="clinica">En clínica</option>
-
       </select>
-      <label for="tipo">Seleccione el tipo de atención que necesita:</label>
-      <select name="atencion" id="">
 
+      <label for="tipo">Seleccione el tipo de atención que necesita:</label>
+      <select name="atencion" id="tipo">
         <option value="revision">Revisión general</option>
         <option value="grooming">Grooming</option>
         <option value="pelo">Corte de pelo</option>
         <option value="profilaxis">Profilaxis dental para gatos y perros</option>
         <option value="lab">Toma de muestras para exámenes de laboratorio</option>
-        <option value="ultra"> Ultrasonido </option>
-        <option value="Cirujia"> Cirugía </option>
+        <option value="ultra">Ultrasonido</option>
+        <option value="Cirujia">Cirugía</option>
       </select>
 
-      <label for="fecha">Seleccione la fecha(Día/Mes/Año): </label>
+      <label for="fecha">Seleccione la fecha (Día/Mes/Año): </label>
       <input type="date" name="fecha" id="fecha">
 
-      <label for="hora">Seleccione la hora(Formato 24hs): </label>
+      <label for="hora">Seleccione la hora (Formato 24hs): </label>
       <input type="time" name="hora" id="hora">
 
       <label for="anotaciones">Añada aquí alguna anotación para la consulta</label>
-      <input type="text" placeholder="Necesito herraje para mi caballo, lavado de dientes para el perro...etc">
-      <input type="button" value="Enviar Cita">
+      <input type="text" placeholder="Necesito herraje para mi caballo, lavado de dientes para el perro...etc"
+        id="anotaciones">
 
-
-
+      <input type="button" value="Enviar Cita" id="botonForm" onclick="validarFormulario(); descargarComprobante();">
 
     </form>
+
+
+
+
+
+
+
 
     <br><br><br><br><br>
 
@@ -138,6 +141,11 @@
 
 
 
+
+
+
+
+    <br><br><br><br><br>
 
 
 
